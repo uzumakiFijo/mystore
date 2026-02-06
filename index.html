@@ -3,69 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malayl.ie | Irish-Malayali Community</title>
+    <title>Malayal.ie | Irish-Malayali Community</title>
     <style>
         :root {
-            --primary-orange: #f2a93b;
+            --primary-orange: #e67e22;
             --primary-green: #2d5a44;
-            --text-dark: #232f3e;
-            --bg-light: #f5f5f5;
+            --text-dark: #2c3e50;
+            --bg-light: #fdfaf6; /* Soothing cream background */
+            --card-white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.6;
-            padding-bottom: 50px;
+            padding-bottom: 40px;
         }
 
         /* Header Section */
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             background: white;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #eee;
         }
 
         .logo {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            border: 4px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 15px;
+            border: 5px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
 
-        h1 { font-size: 1.8rem; color: var(--primary-green); }
-        .tagline { color: #666; font-style: italic; margin-top: 5px; }
+        h1 { font-size: 2.2rem; color: var(--primary-green); letter-spacing: -0.5px; }
+        .tagline { color: #7f8c8d; font-style: italic; margin-top: 8px; font-size: 1.1rem; }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* Disclosure */
-        .disclosure {
-            background-color: #fff3cd;
-            border-left: 4px solid #ff9900;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 8px;
-            font-size: 13px;
-            color: #856404;
-        }
-
         /* Section Headings */
         .section-title {
-            font-weight: bold;
-            margin: 40px 0 20px 0;
+            font-weight: 800;
+            margin: 50px 0 25px 0;
             text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 1.5px;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
             color: var(--primary-green);
             display: flex;
             align-items: center;
@@ -74,82 +64,119 @@
         .section-title::after {
             content: "";
             flex: 1;
-            height: 1px;
-            background: #ccc;
-            margin-left: 15px;
+            height: 2px;
+            background: #e0e0e0;
+            margin-left: 20px;
         }
 
         /* Scholarship Tile */
         .scholarship-card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            border-top: 5px solid var(--primary-green);
+            background: var(--card-white);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border-left: 8px solid var(--primary-green);
         }
 
-        .scholarship-card h2 { margin-bottom: 15px; font-size: 1.4rem; }
+        .scholarship-card h2 { margin-bottom: 20px; font-size: 1.6rem; color: #1a1a1a; }
         .scholarship-link {
             display: block;
-            color: #0066c0;
+            color: #2980b9;
             text-decoration: none;
-            margin-bottom: 10px;
-            font-weight: 500;
+            margin-bottom: 12px;
+            font-weight: 600;
+            transition: color 0.2s;
         }
-        .scholarship-link:hover { text-decoration: underline; }
-        .note { font-size: 0.85rem; color: #666; background: #eee; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .scholarship-link:hover { color: var(--primary-orange); text-decoration: underline; }
+        
+        .note { 
+            font-size: 0.9rem; 
+            color: #5d6d7e; 
+            background: #f4f7f6; 
+            padding: 15px; 
+            border-radius: 8px; 
+            margin: 15px 0;
+            border: 1px dashed #cbd5e0;
+        }
 
         /* Amazon Products Grid */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
         }
 
         .product-card {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            padding: 20px;
+            background: var(--card-white);
+            border: 1px solid #eaeaea;
+            border-radius: 16px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
-            transition: transform 0.2s;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
         }
 
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .product-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: var(--primary-orange);
+        }
 
         .product-image {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: contain;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        .product-title { font-size: 16px; font-weight: bold; margin-bottom: 10px; height: 45px; overflow: hidden; }
-        .product-description { font-size: 13px; color: #555; margin-bottom: 15px; flex-grow: 1; }
+        .product-title { 
+            font-size: 1.2rem; 
+            font-weight: 800; /* Bolder Title */
+            margin-bottom: 12px; 
+            line-height: 1.3;
+            color: #1a1a1a;
+        }
+        .product-description { font-size: 0.95rem; color: #555; margin-bottom: 20px; flex-grow: 1; }
 
         .product-link {
-            background-color: #ff9900;
+            background-color: var(--primary-orange);
             color: white;
             text-align: center;
-            padding: 10px;
+            padding: 14px;
             text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
+            border-radius: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
 
-        footer { text-align: center; padding: 40px; color: #888; font-size: 0.8rem; }
+        /* Visually Soothing Disclosure */
+        .disclosure {
+            background-color: #f0f2f5;
+            padding: 20px;
+            margin-top: 60px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: #7f8c8d;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        footer { text-align: center; padding: 40px; color: #bdc3c7; font-size: 0.85rem; }
 
         @media (max-width: 600px) {
             .products-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="logo.jpg" alt="Malayl.ie Logo" class="logo">
-        <h1>Malayl.ie</h1>
+        <img src="logo.jpg" alt="Malayal.ie Logo" class="logo">
+        <h1>Malayal.ie</h1>
         <p class="tagline">Surviving the Irish weather with a cup of Chaya. ☕️</p>
     </header>
 
@@ -166,11 +193,7 @@
             
             <a class="scholarship-link" href="https://hea.ie/assets/uploads/2026/01/2026-GOI-IES-Call-Document.pdf?hl=en-IN" target="_blank">📁 Download 2026 Call Document</a>
             <a class="scholarship-link" href="https://hea.ie/assets/uploads/2026/01/2026-GOI-IES-FAQs_Updated_28-January-2026.pdf?hl=en-IN" target="_blank">❓ Frequently Asked Questions</a>
-            <p style="margin-top:10px; font-size: 14px;">📧 Contact: <a href="mailto:goi-ies@hea.ie">goi-ies@hea.ie</a></p>
-        </div>
-
-        <div class="disclosure">
-            <p><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. This means that if you click on a link and make a purchase, I may receive a small commission at no extra cost to you.</p>
+            <p style="margin-top:10px; font-size: 14px; font-weight: 500;">📧 Contact: <a href="mailto:goi-ies@hea.ie" style="color:var(--primary-green)">goi-ies@hea.ie</a></p>
         </div>
 
         <div class="section-title">Product Recommendations</div>
@@ -179,24 +202,28 @@
             <div class="product-card">
                 <img src="https://images-eu.ssl-images-amazon.com/images/I/81NGxI1IUHL._AC_UL232_SR232,232_.jpg" alt="Leg Massager" class="product-image">
                 <div class="product-title">Nekteck Leg Massager with Air Compression</div>
-                <p class="product-description">Foot and Calf Massage Machine with 2 Modes, 3 Intensities. Perfect for relaxation and circulation.</p>
+                <p class="product-description">Foot and Calf Massage Machine with 2 Modes, 3 Intensities. Perfect for relaxation and circulation after a long day.</p>
                 <a href="https://www.amazon.ie/dp/B08F5BCQ1Y?tag=uzumakifijo-21" class="product-link" target="_blank">View on Amazon</a>
             </div>
 
             <div class="product-card">
                 <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/5a12347d-39d3-4586-9da3-176be710ed9f.__CR0,0,970,600_PT0_SX970_V1___.png" alt="Baby Playpen" class="product-image">
                 <div class="product-title">Baby Playpen, Large for Toddlers with Mat</div>
-                <p class="product-description">Foldable Infant Fence, Indoor/Outdoor Child Activity Center with Anti-Collision Foam.</p>
+                <p class="product-description">Foldable Infant Fence, Indoor/Outdoor Child Activity Center with Anti-Collision Foam for maximum safety.</p>
                 <a href="https://www.amazon.ie/dp/B0DL48JLRK?tag=uzumakifijo-21" class="product-link" target="_blank">View on Amazon</a>
             </div>
 
         </div>
 
+        <div class="disclosure">
+            <p><strong>Disclosure:</strong> As an Amazon Associate I earn from qualifying purchases. This means that if you click on a link and make a purchase, I may receive a small commission at no extra cost to you. This helps support the maintenance of Malayal.ie.</p>
+        </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Malayl.ie. All rights reserved.</p>
-        <p style="font-size: 10px; margin-top: 5px;">Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
+        <p>&copy; 2026 Malayal.ie. All rights reserved.</p>
+        <p style="font-size: 10px; margin-top: 10px; opacity: 0.6;">Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
     </footer>
 
 </body>
